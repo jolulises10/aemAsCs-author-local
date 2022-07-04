@@ -2,7 +2,7 @@
 
 This project is based on the Adobe WKND project (https://github.com/adobe/aem-guides-wknd)
 
-Additional changes on the project base:
+Additional changes on the base project code:
 1) New Servlet HelloWorldComponentServlet in the core package. Get and Post (yet to be completed) methods
 2) New fields and methods for the HelloWorldModel class using jackson lib to json response
 3) Unit tests for the servlet and model
