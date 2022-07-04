@@ -24,3 +24,6 @@ hs_err_pid*
 
 # MacOS DSStore files
 .DS_Store
+
+# IntelliJ IDE folder
+.idea
