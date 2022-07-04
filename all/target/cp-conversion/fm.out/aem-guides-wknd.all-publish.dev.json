@@ -1,0 +1,12 @@
+{
+  "id":"com.adobe.aem.guides:aem-guides-wknd.all:slingosgifeature:publish.dev:1.1.0",
+  "configurations":  {
+    "org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl":    {
+      "resource.resolver.mapping":[
+        "/content/wknd/</",
+        "/:/"
+      ],
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:1.1.0|com.adobe.aem.guides:aem-guides-wknd.ui.config:1.1.0"
+    }
+  }
+}

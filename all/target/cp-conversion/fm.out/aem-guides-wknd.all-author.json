@@ -1,0 +1,73 @@
+{
+  "id":"com.adobe.aem.guides:aem-guides-wknd.all:slingosgifeature:author:1.1.0",
+  "configurations":  {
+    "com.adobe.granite.csrf.impl.CSRFFilter":    {
+      "filter.safe.user.agents":[
+        "Apache-HttpClient/*",
+        "Jakarta Commons-HttpClient/*",
+        "Jakarta-Commons-VFS",
+        "curl/*",
+        "Wget/*",
+        "WebDAVFS/*",
+        "Microsoft-WebDAV-MiniRedir/*",
+        "Ruby",
+        "Adobe-Campaign/*",
+        "Forms-Mobile *"
+      ],
+      "filter.excluded.paths":[
+        "/libs/dam/gui/content/assets/assetlinkshare",
+        "/content/communities/scorm/RecordResults",
+        "/content/cq:graphql/global/endpoint",
+        "/graphql",
+        "/libs/dam/cfm/headless/endpoints/content/graphql",
+        "/content/cq:graphql/wknd/endpoint"
+      ],
+      "filter.methods":[
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "filter.enable.safe.user.agents":false,
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:1.1.0|com.adobe.aem.guides:aem-guides-wknd.ui.config:1.1.0"
+    },
+    "com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql":    {
+      "supportscredentials":true,
+      "exposedheaders":[
+        ""
+      ],
+      "supportedmethods":[
+        "GET",
+        "HEAD",
+        "POST"
+      ],
+      "alloworigin":[
+        ""
+      ],
+      "maxage:Integer":1800,
+      "alloworiginregexp":[
+        "http://localhost:.*"
+      ],
+      "allowedpaths":[
+        "/content/graphql/global/endpoint.json",
+        "/content/cq:graphql/wknd/endpoint.json"
+      ],
+      "supportedheaders":[
+        "Origin",
+        "Accept",
+        "X-Requested-With",
+        "Content-Type",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers",
+        "authorization"
+      ],
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:1.1.0|com.adobe.aem.guides:aem-guides-wknd.ui.config:1.1.0"
+    },
+    "com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider~wknd":    {
+      "mobile.resourceTypes":[
+        "wknd/components/page"
+      ],
+      "README":"Indicate which page resource types should display the mobile emulators.",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:1.1.0|com.adobe.aem.guides:aem-guides-wknd.ui.config:1.1.0"
+    }
+  }
+}

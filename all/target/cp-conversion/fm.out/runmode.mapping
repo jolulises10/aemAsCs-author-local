@@ -1,0 +1,10 @@
+#File edited by the Apache Sling Content Package to Sling Feature converter
+#Fri Jun 10 10:50:15 BST 2022
+publish.prod=aem-guides-wknd.all-publish.prod.json
+prod=aem-guides-wknd.all-prod.json
+stage=aem-guides-wknd.all-stage.json
+author=aem-guides-wknd.all-author.json
+publish=aem-guides-wknd.all-publish.json
+(default)=aem-guides-wknd.all.json
+publish.stage=aem-guides-wknd.all-publish.stage.json
+publish.dev=aem-guides-wknd.all-publish.dev.json

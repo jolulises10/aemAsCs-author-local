@@ -1,0 +1,105 @@
+{
+  "id":"com.adobe.aem.guides:aem-guides-wknd.all:slingosgifeature:publish:1.1.0",
+  "configurations":  {
+    "com.day.cq.auth.impl.LoginSelectorHandler":    {
+      "auth.loginselector.defaultchangepwpage":"/libs/granite/core/content/changepassword",
+      "auth.loginselector.changepw.mappings":[
+        ""
+      ],
+      "auth.loginselector.handle.all.extensions":false,
+      "service.ranking:Integer":5000,
+      "auth.loginselector.handle":[
+        "html",
+        "htm"
+      ],
+      "auth.loginselector.defaultloginpage":"/content/wknd/us/en/errors/sign-in",
+      "auth.loginselector.mappings":[
+        "/libs/granite/core/content/login:/login",
+        "/content/wknd/us/en/errors/sign-in:/content/wknd/us",
+        "/content/wknd/ca/en/errors/sign-in:/content/wknd/ca"
+      ],
+      "path":"/",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:1.1.0|com.adobe.aem.guides:aem-guides-wknd.ui.config:1.1.0"
+    },
+    "com.adobe.granite.csrf.impl.CSRFFilter":    {
+      "filter.safe.user.agents":[
+        "Apache-HttpClient/*",
+        "Jakarta Commons-HttpClient/*",
+        "Jakarta-Commons-VFS",
+        "curl/*",
+        "Wget/*",
+        "WebDAVFS/*",
+        "Microsoft-WebDAV-MiniRedir/*",
+        "Ruby",
+        "Adobe-Campaign/*",
+        "Forms-Mobile *"
+      ],
+      "filter.excluded.paths":[
+        "/libs/dam/gui/content/assets/assetlinkshare",
+        "/content/communities/scorm/RecordResults",
+        "/content/cq:graphql/global/endpoint",
+        "/graphql",
+        "/libs/dam/cfm/headless/endpoints/content/graphql",
+        "/content/cq:graphql/wknd/endpoint"
+      ],
+      "filter.methods":[
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "filter.enable.safe.user.agents":false,
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:1.1.0|com.adobe.aem.guides:aem-guides-wknd.ui.config:1.1.0"
+    },
+    "com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql":    {
+      "supportscredentials":false,
+      "exposedheaders":[
+        ""
+      ],
+      "supportedmethods":[
+        "GET",
+        "HEAD",
+        "POST"
+      ],
+      "alloworigin":[
+        ""
+      ],
+      "maxage:Integer":1800,
+      "alloworiginregexp":[
+        "http://localhost:.*"
+      ],
+      "allowedpaths":[
+        "/content/graphql/global/endpoint.json",
+        "/content/cq:graphql/wknd/endpoint.json"
+      ],
+      "supportedheaders":[
+        "Origin",
+        "Accept",
+        "X-Requested-With",
+        "Content-Type",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers"
+      ],
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:1.1.0|com.adobe.aem.guides:aem-guides-wknd.ui.config:1.1.0"
+    },
+    "com.day.cq.commons.servlets.RootMappingServlet":    {
+      "rootmapping.target":"/content/wknd/us/en.html",
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:1.1.0|com.adobe.aem.guides:aem-guides-wknd.ui.config:1.1.0"
+    },
+    "org.apache.sling.security.impl.ReferrerFilter":    {
+      "allow.hosts.regexp":[
+        ""
+      ],
+      "allow.hosts":[
+        ""
+      ],
+      "filter.methods":[
+        "POST"
+      ],
+      "exclude.agents.regexp":[
+        ""
+      ],
+      "allow.empty":true,
+      ":configurator:content-package-origins":"com.adobe.aem.guides:aem-guides-wknd.all:1.1.0|com.adobe.aem.guides:aem-guides-wknd.ui.config:1.1.0"
+    }
+  }
+}
